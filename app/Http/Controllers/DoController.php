@@ -61,4 +61,8 @@ class DoController extends Controller
     {
         //
     }
+
+    public function test($username,$pass){
+        echo "user name is ".$username ."password is ". $pass ;
+    }
 }

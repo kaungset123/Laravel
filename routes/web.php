@@ -26,6 +26,10 @@ Route::get("/home/house/bar/teashop/",array('as'=>'short.com',function(){
     echo "$result";
 }));
 
-Route::get('/post','App\Http\Controllers\PostsController@index');
+Route::get('/home','App\Http\Controllers\PostsController@index');
+Route::get('/about','App\Http\Controllers\PostsController@show');
+Route::get('/contact','App\Http\Controllers\PostsController@contact');
 
-Route::get('/do','App\Http\Controllers\DoController@index'); 
+
+
+Route::get('/do/{username}/{password}','App\Http\Controllers\DoController@test'); 

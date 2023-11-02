@@ -11,7 +11,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        echo "I am index method from post controller";
+        $cars = ["toyota","honda","KIA","Tesla"];
+        return view("home",compact('cars'));
     }
 
     /**
@@ -27,15 +28,16 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $about = ["economy","potic","geology"];
+        return view("about",compact("about"));
     }
 
     /**
@@ -61,4 +63,9 @@ class PostsController extends Controller
     {
         //
     }
+
+    public function contact(){
+        return view("contact");
+    }
+
 }
